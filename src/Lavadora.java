@@ -46,14 +46,14 @@ public class Lavadora extends Electrodomestico{ //"extends" enlaza la clase actu
     @Override
     public double getConsumo(int horas) {
         if(!aguaCaliente){
-            return (horas*super.getPotencia());
+            return (horas*this.potencia);
         } else {
-         return (horas*(super.getPotencia()+super.getPotencia()*0.20));
+         return (horas*(this.potencia*1.20));
         }
     }
 
     @Override
-    public void getCosteConsumo(int horas, double costeHora) {
-
+    public double getCosteConsumo(int horas, double costeHora){
+        return (horas*costeHora);
     }
 }
