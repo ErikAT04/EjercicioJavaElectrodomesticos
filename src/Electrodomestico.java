@@ -10,6 +10,11 @@ public abstract class Electrodomestico {
         this.potencia = potencia;
     }
 
+    public Electrodomestico(String marca, double potencia) {
+        this.marca = marca;
+        this.potencia = potencia;
+    }
+
     public String getTipo() {
         return tipo;
     }
@@ -43,6 +48,6 @@ public abstract class Electrodomestico {
                 '}';
     }
 
-    public abstract void getConsumo(int horas);
+    public abstract double getConsumo(int horas);
     public abstract void getCosteConsumo(int horas, double costeHora);
 }
